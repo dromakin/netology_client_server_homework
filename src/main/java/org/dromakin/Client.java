@@ -40,7 +40,7 @@ public class Client {
 
     public String sendMessage(String msg) throws ClientException {
         out.println(msg);
-        String resp = null;
+        String resp;
 
         try {
             resp = in.readLine();
