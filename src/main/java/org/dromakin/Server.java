@@ -38,7 +38,7 @@ public class Server {
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             logger.info("Server started!");
 
-            logger.info("New connection accepted");
+            logger.info("New connection accepted on port: {}", clientSocket.getPort());
             final String msg = in.readLine();
             out.println(String.format("Hi, your msg: \"%s\"", msg));
 
